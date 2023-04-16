@@ -156,49 +156,49 @@ def vehicle(name):
     
     return response
 
-# @app.route('/hospital/<name>', methods= ['GET']) 
-# def hospital(name):
+@app.route('/hospital/<name>', methods= ['GET']) 
+def hospital(name):
     
-#     #dec_msg is the real question asked by the user
-#     dec_msg = name.replace("+", " ")
+    #dec_msg is the real question asked by the user
+    dec_msg = name.replace("+", " ")
     
-#     intents = json.loads(open("hospital.json").read())
-#     words = pickle.load(open('hospital_words.pkl', 'rb'))
-#     classes = pickle.load(open('hospital_classes.pkl', 'rb'))
-#     model = load_model('hospital_chatbotmodel.h5')
-    
-    
-#     #get the response from the ML model & dec_msg as the argument
-#     response = chatbot_response(dec_msg,model,intents,words,classes)
+    intents = json.loads(open("hospital.json").read())
+    words = pickle.load(open('hospital_words.pkl', 'rb'))
+    classes = pickle.load(open('hospital_classes.pkl', 'rb'))
+    model = load_model('hospital_chatbotmodel.h5')
     
     
-#     if response == "bye":
-#         # exit the application if the user says "bye"
-#         request.environ.get('werkzeug.server.shutdown')()
+    #get the response from the ML model & dec_msg as the argument
+    response = chatbot_response(dec_msg,model,intents,words,classes)
     
     
-#     return jsonify({'machine':response})
+    if response == "bye":
+        # exit the application if the user says "bye"
+        request.environ.get('werkzeug.server.shutdown')()
+    
+    
+    return response
 
-# @app.route('/restaurant/<name>', methods= ['GET']) 
-# def restaurant(name):
+@app.route('/restaurant/<name>', methods= ['GET']) 
+def restaurant(name):
     
-#     #dec_msg is the real question asked by the user
-#     dec_msg = name.replace("+", " ")
+    #dec_msg is the real question asked by the user
+    dec_msg = name.replace("+", " ")
     
-#     intents = json.loads(open("restaurant.json").read())
-#     words = pickle.load(open('restaurant_words.pkl', 'rb'))
-#     classes = pickle.load(open('restaurant_classes.pkl', 'rb'))
-#     model = load_model('restaurant_chatbotmodel.h5')
+    intents = json.loads(open("restaurant.json").read())
+    words = pickle.load(open('restaurant_words.pkl', 'rb'))
+    classes = pickle.load(open('restaurant_classes.pkl', 'rb'))
+    model = load_model('restaurant_chatbotmodel.h5')
     
-#     #get the response from the ML model & dec_msg as the argument
-#     response = chatbot_response(dec_msg,model,intents,words,classes)
+    #get the response from the ML model & dec_msg as the argument
+    response = chatbot_response(dec_msg,model,intents,words,classes)
     
-#     if response == "bye":
-#         # exit the application if the user says "bye"
-#         request.environ.get('werkzeug.server.shutdown')()
+    if response == "bye":
+        # exit the application if the user says "bye"
+        request.environ.get('werkzeug.server.shutdown')()
     
     
-#     return response
+    return response
 
 # @app.route('/salon/<name>', methods= ['GET']) 
 # def salon(name):
