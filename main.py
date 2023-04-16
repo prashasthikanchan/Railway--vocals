@@ -110,7 +110,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
+    return 'Book your appointments now'
 
 @app.route('/electrician/<name>') 
 def electrician(name):
@@ -126,12 +126,7 @@ def electrician(name):
     
     #get the response from the ML model & dec_msg as the argument
     response = chatbot_response(dec_msg,model,intents,words,classes)
-    
-    if response == "bye":
-        # exit the application if the user says "bye"
-        request.environ.get('werkzeug.server.shutdown')()
-    
-    
+     
     return response
 @app.route('/vehicle/<name>', methods= ['GET']) 
 def vehicle(name):
@@ -144,15 +139,9 @@ def vehicle(name):
     classes = pickle.load(open('vehicle_classes.pkl', 'rb'))
     model = load_model('vehicle_chatbotmodel.h5')
     
-    
-    
+ 
     #get the response from the ML model & dec_msg as the argument
     response = chatbot_response(dec_msg,model,intents,words,classes)
-    
-    if response == "bye":
-        # exit the application if the user says "bye"
-        request.environ.get('werkzeug.server.shutdown')()
-    
     
     return response
 
@@ -171,12 +160,6 @@ def hospital(name):
     #get the response from the ML model & dec_msg as the argument
     response = chatbot_response(dec_msg,model,intents,words,classes)
     
-    
-    if response == "bye":
-        # exit the application if the user says "bye"
-        request.environ.get('werkzeug.server.shutdown')()
-    
-    
     return response
 
 @app.route('/restaurant/<name>', methods= ['GET']) 
@@ -192,11 +175,6 @@ def restaurant(name):
     
     #get the response from the ML model & dec_msg as the argument
     response = chatbot_response(dec_msg,model,intents,words,classes)
-    
-    if response == "bye":
-        # exit the application if the user says "bye"
-        request.environ.get('werkzeug.server.shutdown')()
-    
     
     return response
 
@@ -215,11 +193,6 @@ def salon(name):
     #get the response from the ML model & dec_msg as the argument
     response = chatbot_response(dec_msg,model,intents,words,classes)
     
-    if response == "bye":
-        # exit the application if the user says "bye"
-        request.environ.get('werkzeug.server.shutdown')()
-    
-    
     return response
 
 @app.route('/dentist/<name>', methods= ['GET']) 
@@ -236,11 +209,6 @@ def dentist(name):
     #get the response from the ML model & dec_msg as the argument
     response = chatbot_response(dec_msg,model,intents,words,classes)
     
-    if response == "bye":
-        # exit the application if the user says "bye"
-        request.environ.get('werkzeug.server.shutdown')()
-    
-    
     return response
 
 @app.route('/plumber/<name>', methods= ['GET']) 
@@ -253,13 +221,6 @@ def plumber(name):
     words = pickle.load(open('plumber_words.pkl', 'rb'))
     classes = pickle.load(open('plumber_classes.pkl', 'rb'))
     model = load_model('plumber_chatbotmodel.h5')
-    
-    #get the response from the ML model & dec_msg as the argument
-    response = chatbot_response(dec_msg,model,intents,words,classes)
-    
-    if response == "bye":
-        # exit the application if the user says "bye"
-        request.environ.get('werkzeug.server.shutdown')()
        
     return response
 
@@ -276,10 +237,6 @@ def emergency(name):
     
     #get the response from the ML model & dec_msg as the argument
     response = chatbot_response(dec_msg,model,intents,words,classes)
-    
-    if response == "bye":
-        # exit the application if the user says "bye"
-        request.environ.get('werkzeug.server.shutdown')()   
     
     return response
 
