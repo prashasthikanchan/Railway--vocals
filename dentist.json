@@ -6,27 +6,27 @@
 
   {"tag": "name",
   "patterns": ["what is the name","What's your name?","May I know your name?","Who am I speaking to?","What should I call you?","name","what's your name","who are you","what should I call you","how can I address you","who’s speaking"],
-  "responses": ["shreya"]
+  "responses": ["name to be accessed"]
   },
  
 {"tag": "date ",
     "patterns": [" when?","date","When are you looking to schedule the appointment?","What date do you have in mind?","When do you want to come in?","What day works best for you?","when do you want the appointment for?","when do you want the appointment", "for which date do you want the appointment" ],
-    "responses": ["today ","tomorrow"]
+    "responses": ["date to be accessed"]
   },
 
    {"tag": "time",
   "patterns": ["At what time do you want the appointment","What time are you available?","What time do you want to schedule the appointment?","Do you have a preferred time?","What time works for you?", "at what time","time please","time","could you please tell me the time?", "At what time will you come"],
-  "responses": ["2pm"]
+  "responses": ["time to be accessed"]
   },
 
 {"tag": "age ",
-    "patterns": ["May I know your age?","May I know how old you are?","May I ask what age you are?","What is your age?","How old are you","Can you tell me your age?"],
-    "responses": ["25"]
+    "patterns": ["May I know your age?","May I know how old you are?","May I ask what age you are?","What is your age?","How old are you","Can you tell me your age?","What is you current age?","Do you mind letting me know your age?","I would like to know how old you are."],
+    "responses": ["age to be accessed"]
   },
 
 {"tag": "phoneNumber",
-    "patterns": ["May I have your phone number?","Can I get your phone number?","Can you share your phone number please?","Can you tell me your phone number please "],
-    "responses": ["yeah sure my number is 1234567890 "]
+    "patterns": ["May I have your phone number?","Can I get your phone number?","Can you share your phone number please?","Can you tell me your phone number please","Could you provide me with your contact number?","Can you please let me know the best number to reach you at?"],
+    "responses": ["number to be accessed"]
   },
 
 {"tag": "previousAppointment ",
@@ -45,12 +45,12 @@
   },
 
 {"tag": "confirm",
-  "patterns": ["Do I confirm the appointment?","Your appointment is booked","See you at 2pm on Thursday","I confirm the appointment","Do you want me to confirm the appointment","Your slot is booked","I am leaving","Have a Good Day","bye","see ya"],
+  "patterns": ["Do I confirm the appointment?","Your appointment is booked","See you at 2pm on Thursday","I confirm the appointment","Do you want me to confirm the appointment","Your slot is booked","I am leaving","Have a Good Day","bye","see ya","Just to confirm, the appointment is correct?","Can you please confirm the booking?"],
   "responses": ["Yes Thank you","Yes, Thank you so much","Yes please"]
   },
 
 {"tag": "anythingElse",
-    "patterns": ["Your appointment is booked. Anything else?","You have an appointment set. Anything else?", " can I help you with anything else?","Do you want anything else?","Anything else that i can do for you?","Anything else?"],
+    "patterns": ["Your appointment is booked. Anything else?","You have an appointment set. Anything else?", " can I help you with anything else?","Do you want anything else?","Anything else that i can do for you?","Anything else?","Are there any other questions?","Do you have any other enqueries or concerns?","Is there somwthing else I can help with?"],
     "responses": ["No Thank you so much"," No Thank you"]
   },
 
