@@ -71,39 +71,7 @@ def chatbot_response(msg,model,intents,words,classes):
     else:
         ints = predict_class(msg, model,words,classes)
         res = get_response(ints, intents)
-        if res == "name to be accessed":
-            entry = 'name'
-            return firebase_response(entry)
-        elif res == "date to be accessed":
-            entry = 'date'
-            return firebase_response(entry)
-        elif res == "time to be accessed":
-            entry = 'time'
-            return firebase_response(entry)
-        elif res == "address to be accessed":
-            entry = 'address'
-            return firebase_response(entry)
-        elif res == "number to be accessed":
-            entry = 'person_no'
-            return firebase_response(entry)
-        elif res == "dept to be accessed":
-            entry = 'department'
-            return firebase_response(entry)
-        elif res == "docname to be accessed":
-            entry = 'doctor_name'
-            return firebase_response(entry)
-        elif res == "members to be accessed":
-            entry = 'no_people'
-            return firebase_response(entry)
-        elif res == "issue to be accessed":
-            entry = 'problem'
-            return firebase_response(entry)
-        elif res == "type to be accessed":
-            entry = ''
-            return firebase_response(entry)
-        else:
-            
-            return res
+        return res
 
 app = Flask(__name__)
 
